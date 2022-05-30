@@ -1,1 +1,0 @@
-web: java -Dserver.port=$PORT -Dspring.profiles.active=prod -war target/cursospringrestapi-0.0.1-SNAPSHOT.war

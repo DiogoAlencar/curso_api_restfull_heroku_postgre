@@ -7,6 +7,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -21,6 +22,9 @@ import org.springframework.web.bind.annotation.RestController;
 import curso.api.rest.cursospringrestapi.model.Usuario;
 import curso.api.rest.cursospringrestapi.repository.UsuarioRepository;
 
+// @CrossOrigin(origins = "http://www.eee.com.br") permite acesso a API somente do endereço
+// se tiver outros dominios, e quiser customizar, deve-se fazer outro Controller 
+@CrossOrigin
 @RestController
 @RequestMapping(value = "/usuario")
 public class IndexController {
